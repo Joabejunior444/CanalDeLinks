@@ -1,0 +1,106 @@
+body {
+  background-color: #0d1117;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #e1e4e8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagem {
+  height: 180px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00e5ff;
+  margin-bottom: 20px;
+  border: 3px solid #00e5ff;
+}
+
+.titulo {
+  font-size: 38px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #00e5ff;
+  width: 0;
+  animation: digita 3s steps(20) forwards, pisca 0.7s step-end infinite;
+  font-weight: 700;
+  color: #e1e4e8;
+}
+
+.iconProg {
+  color: #00e5ff;
+}
+
+@keyframes digita {
+  to {
+    width: 14ch;
+  }
+}
+@keyframes pisca {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 320px;
+  height: 50px;
+  background-color: #161b22;
+  border: 3px solid #00e5ff;
+  border-radius: 12px;
+  color: #e1e4e8;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link:hover {
+  background-color: #00e5ff;
+  color: #0d1117;
+  box-shadow: 0 0 15px #00e5ff;
+}
+
+.instagram i {
+  color: #e1306c;
+}
+.discord i {
+  color: #7289da;
+}
+.github i {
+  color: #e1e4e8;
+}
+.tiktok i {
+  color: #69c9d0;
+}
+
+@media (max-width: 420px) {
+  .link {
+    width: 90%;
+  }
+  .titulo {
+    font-size: 28px;
+  }
+  .imagem {
+    height: 140px;
+  }
+}
